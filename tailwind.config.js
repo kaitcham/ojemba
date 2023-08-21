@@ -15,6 +15,9 @@ module.exports = {
         raleWay: ["Raleway", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      scale: {
+        120:"1.2",
+      }
     },
   },
   plugins: [],
