@@ -5,18 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <script>
-    const loadComponents = async (id, url) => {
-      const res = await fetch(url);
-      const text = await res.text();
-      return (document.getElementById(id).innerHTML = text);
-    };
-
-    window.onload = () => {
-      loadComponents("manage", "./src/sections/manage-team.html");
-    };
-  </script>
   <body class="bg-primary">
+    <section id="hero"></section>
     <section id="manage"></section>
+    <script src="./src/scripts/main.js"></script>
   </body>
 </html>
