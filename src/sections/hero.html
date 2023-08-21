@@ -4,7 +4,7 @@
   <div
     class="navbar relative flex h-20 items-center justify-between px-4 sm:px-20"
   >
-    <img src="src/assets/Logo.svg" alt="" class="z-10 w-28 md:w-32" />
+    <img src="src/assets/Logo.svg" alt="" class="z-50 w-28 md:w-32" />
     <ul
       class="hidden sm:flex sm:items-center sm:gap-10 sm:font-roboto sm:text-base sm:font-medium sm:text-white"
     >
@@ -21,11 +21,9 @@
       </ul>
     </ul>
     <div
-      class="menu absolute left-0 top-0 hidden h-screen w-full bg-primary/30 px-4"
+      class="menu absolute left-0 top-0 z-10 hidden h-screen w-full bg-primary bg-gradient-to-r from-[#0000] to-[#8ACC50]/40 px-4"
     >
-      <ul
-        class="relative mt-20 space-y-4 border-t pt-4 font-roboto text-lg text-white"
-      >
+      <ul class="relative mt-20 space-y-4 pt-4 font-roboto text-lg text-white">
         <li>Services</li>
         <li>Über uns</li>
         <li>Darum wir</li>
@@ -34,12 +32,12 @@
         <li>FAQ</li>
         <li>Kontakt</li>
         <ul class="absolute right-2 top-0">
-          <li>DE</li>
+          <li class="">DE</li>
           <li>EN</li>
         </ul>
       </ul>
     </div>
-    <div class="bars z-10 block sm:hidden">
+    <button class="bars z-10 block sm:hidden" onclick="toggleMenu()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -54,7 +52,7 @@
           d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </svg>
-    </div>
+    </button>
   </div>
   <div
     class="relative grid flex-1 grid-cols-1 place-content-center gap-10 overflow-hidden px-4 sm:mx-auto sm:max-w-full sm:grid-cols-2 sm:px-0 sm:pl-20"
@@ -77,32 +75,32 @@
       />
     </div>
     <div
-      class=" font-montSerrat  grid grid-cols-1 place-content-center gap-10 bg-[#001342] bg-gradient-to-r from-[#0000] to-[#8ACC5080] px-4 py-10 sm:sticky sm:bottom-0 sm:col-span-2 sm:w-full sm:grid-cols-3 sm:py-7 sm:pl-20"
+      class="grid grid-cols-1 place-content-center gap-10 bg-[#001342] bg-gradient-to-r from-[#0000] to-[#8ACC5080] px-4 py-10 sm:sticky sm:bottom-0 sm:col-span-2 sm:w-full sm:grid-cols-3 sm:py-[2%] sm:pl-20"
     >
       <div class="flex gap-6">
         <img src="src/assets/hand-coins.svg" alt="" class="w-12" />
         <div>
           <h3 class="text-secondary">Kostengünstig</h3>
-          <p class="w-44 text-xs text-white">
+          <p class="w-44 text-sm text-white">
             niedriges Lohnkostenniveau im europäischen Vergleich
           </p>
         </div>
       </div>
       <div class="flex gap-6">
-        <img src="src/assets/handshake.svg" alt="" class="w-12" />
+        <img src="src/assets/hand-coins.svg" alt="" class="w-12" />
         <div>
-          <h3 class="text-secondary">Talent & Quality</h3>
-          <p class="w-44 text-xs text-white">
-            Viele junge, gut ausgebildete und motivierte Menschen   
+          <h3 class="text-secondary">Kostengünstig</h3>
+          <p class="w-44 text-sm text-white">
+            niedriges Lohnkostenniveau im europäischen Vergleich
           </p>
         </div>
       </div>
       <div class="flex gap-6">
-        <img src="src/assets/map-pin-line 1.svg" alt="" class="w-12" />
+        <img src="src/assets/hand-coins.svg" alt="" class="w-12" />
         <div>
-          <h3 class="text-secondary">Location</h3>
-          <p class="w-44 text-xs text-white">
-            Rwanda befindet sich in der selben Zeitzone wie die DACH Region 
+          <h3 class="text-secondary">Kostengünstig</h3>
+          <p class="w-44 text-sm text-white">
+            niedriges Lohnkostenniveau im europäischen Vergleich
           </p>
         </div>
       </div>
