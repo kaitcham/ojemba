@@ -4,11 +4,12 @@ const loadComponents = async (id, url) => {
   return (document.getElementById(id).innerHTML = text);
 };
 
-window.onload = () => {
+window.onload = async () => {
   loadComponents("hero", "./src/sections/hero.html");
   loadComponents("manage", "./src/sections/manage-team.html");
+  await loadComponents("teams", "./src/sections/our-teams.html");
+  document.querySelector(".skills").innerHTML = addSkills(skills);
   loadComponents("faq", "./src/sections/faq.html");
-
 };
 
 function toggleMenu() {
@@ -48,3 +49,41 @@ function toggleMenu() {
       </svg>`;
   }
 }
+
+const skills = [
+  "Typescript",
+  "Javascript",
+  "React",
+  "REST APIs",
+  "Redux",
+  "test driven development",
+  "Data modeling",
+  "JWT",
+  "CSS",
+  "frontend archite",
+  "Figma",
+  "Next.JS",
+  "ORM",
+  "Prisma",
+  "GraphQL",
+  "CI/CD",
+  "Scrum Framework",
+];
+
+function addSkills(skills) {
+  let html = "";
+  skills.forEach((skill, index) => {
+    if (skill === "test driven development")
+      html += `<button class="rounded-3xl bg-white px-4 order-last py-2 sm:mr-3">${skill}</button>`;
+    else
+      index === 6 && window.innerWidth > 640
+        ? (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button><br/>`)
+        : (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button>`);
+  });
+  return html;
+}
+
+window.addEventListener("resize", async () => {
+  await loadComponents("teams", "./src/sections/our-teams.html");
+  document.querySelector(".skills").innerHTML = addSkills(skills);
+});
