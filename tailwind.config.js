@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         dark: "#001342",
+        green: "#116355",
         primary: "#001342",
         secondary: "#8ACC50",
         lightYellow: "#F4BA00",
@@ -15,6 +16,9 @@ module.exports = {
         raleWay: ["Raleway", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
+      scale: {
+        120:"1.2",
+      }
     },
   },
   plugins: [],
