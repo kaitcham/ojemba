@@ -7,6 +7,8 @@ const loadComponents = async (id, url) => {
 window.onload = () => {
   loadComponents("hero", "./src/sections/hero.html");
   loadComponents("manage", "./src/sections/manage-team.html");
+  loadComponents("faq", "./src/sections/faq.html");
+
 };
 
 function toggleMenu() {
