@@ -9,6 +9,7 @@ window.onload = async () => {
   loadComponents("manage", "./src/sections/manage-team.html");
   await loadComponents("teams", "./src/sections/our-teams.html");
   document.querySelector(".skills").innerHTML = addSkills(skills);
+  loadComponents("qualities","./src/sections/qualities.html")
   loadComponents("faq", "./src/sections/faq.html");
 };
 
