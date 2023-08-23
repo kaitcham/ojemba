@@ -8,9 +8,9 @@ window.onload = async () => {
   loadComponents("hero", "./src/sections/hero.html");
   loadComponents("manage", "./src/sections/manage-team.html");
   loadComponents("partners", "./src/sections/partners.html");
+  loadComponents("faq", "./src/sections/faq.html");
   await loadComponents("teams", "./src/sections/our-teams.html");
   document.querySelector(".skills").innerHTML = addSkills(skills);
-  loadComponents("faq", "./src/sections/faq.html");
 };
 
 function toggleMenu() {
@@ -75,7 +75,7 @@ function addSkills(skills) {
   let html = "";
   skills.forEach((skill, index) => {
     if (skill === "test driven development")
-      html += `<button class="rounded-3xl bg-white px-4 order-last py-2 sm:mr-3">${skill}</button>`;
+      html += `<button class="rounded-3xl bg-white px-4 order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
     else
       index === 6 && window.innerWidth > 640
         ? (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button><br/>`)
