@@ -10,8 +10,9 @@ window.onload = async () => {
   loadComponents("partners", "./src/sections/partners.html");
   await loadComponents("teams", "./src/sections/our-teams.html");
   document.querySelector(".skills").innerHTML = addSkills(skills);
-  loadComponents("faq", "./src/sections/faq.html");
   loadComponents("advantages", "./src/sections/advantages.html");
+  loadComponents("faq", "./src/sections/faq.html");
+  loadComponents("footer", "./src/sections/footer.html");
 };
 
 function toggleMenu() {
