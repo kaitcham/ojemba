@@ -7,8 +7,8 @@ const loadComponents = async (id, url) => {
 window.onload = async () => {
   loadComponents("hero", "./src/sections/hero.html");
   loadComponents("manage", "./src/sections/manage-team.html");
+  loadComponents("qualities","./src/sections/qualities.html");
   loadComponents("partners", "./src/sections/partners.html");
-   loadComponents("qualities","./src/sections/qualities.html")
   loadComponents("advantages", "./src/sections/advantages.html");
   loadComponents("faq", "./src/sections/faq.html");
   loadComponents("footer", "./src/sections/footer.html");
@@ -78,7 +78,7 @@ function addSkills(skills) {
   let html = "";
   skills.forEach((skill, index) => {
     if (skill === "test driven development")
-      html += `<button class="rounded-3xl bg-white px-4 order-last py-2 sm:mr-3">${skill}</button>`;
+      html += `<button class="rounded-3xl bg-white px-4 order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
     else
       index === 6 && window.innerWidth > 640
         ? (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button><br/>`)
