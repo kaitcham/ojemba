@@ -7,8 +7,9 @@ const loadComponents = async (id, url) => {
 window.onload = async () => {
   loadComponents("hero", "./src/sections/hero.html");
   loadComponents("manage", "./src/sections/manage-team.html");
-  loadComponents("qualities","./src/sections/qualities.html");
+  loadComponents("qualities", "./src/sections/qualities.html");
   loadComponents("partners", "./src/sections/partners.html");
+  loadComponents("statistics", "./src/sections/statistics.html");
   loadComponents("advantages", "./src/sections/advantages.html");
   loadComponents("faq", "./src/sections/faq.html");
   loadComponents("footer", "./src/sections/footer.html");
