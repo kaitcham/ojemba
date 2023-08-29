@@ -62,11 +62,11 @@ const skills = [
   "React",
   "REST APIs",
   "Redux",
-  "test driven development",
+  "Test driven development",
   "Data modeling",
   "JWT",
   "CSS",
-  "frontend archite",
+  "Frontend archite",
   "Figma",
   "Next.JS",
   "ORM",
@@ -79,12 +79,12 @@ const skills = [
 function addSkills(skills) {
   let html = "";
   skills.forEach((skill, index) => {
-    if (skill === "test driven development")
-      html += `<button class="rounded-3xl bg-white px-4 order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
+    if (skill === "Test driven development")
+      html += `<button class="rounded-3xl bg-white px-4 font-raleWay font-semibold order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
     else
       index === 6 && window.innerWidth > 640
-        ? (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button><br/>`)
-        : (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button>`);
+        ? (html += `<button class="rounded-3xl bg-white px-4 py-2 font-raleWay font-semibold sm:mr-3">${skill}</button><br/>`)
+        : (html += `<button class="rounded-3xl bg-white px-4 py-2 font-raleWay font-semibold sm:mr-3">${skill}</button>`);
   });
   return html;
 }
