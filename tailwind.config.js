@@ -18,8 +18,8 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
       },
       scale: {
-        120:"1.2",
-      }
+        130: "1.3",
+      },
     },
   },
   plugins: [],
