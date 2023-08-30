@@ -6,7 +6,7 @@ const loadComponents = async (id, url) => {
 
 window.onload = async () => {
   loadComponents("hero", "./src/sections/hero.html");
-  loadComponents("manage", "./src/sections/manage-team.html");
+  await loadComponents("manage", "./src/sections/manage-team.html");
   loadComponents("qualities", "./src/sections/qualities.html");
   loadComponents("partners", "./src/sections/partners.html");
   loadComponents("founders", "./src/sections/founders.html");
@@ -62,11 +62,11 @@ const skills = [
   "React",
   "REST APIs",
   "Redux",
-  "test driven development",
+  "Test driven development",
   "Data modeling",
   "JWT",
   "CSS",
-  "frontend archite",
+  "Frontend archite",
   "Figma",
   "Next.JS",
   "ORM",
@@ -79,14 +79,24 @@ const skills = [
 function addSkills(skills) {
   let html = "";
   skills.forEach((skill, index) => {
-    if (skill === "test driven development")
-      html += `<button class="rounded-3xl bg-white px-4 order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
+    if (skill === "Test driven development")
+      html += `<button class="rounded-3xl bg-white px-4 font-raleWay font-semibold order-last col-span-2 py-2 sm:mr-3">${skill}</button>`;
     else
       index === 6 && window.innerWidth > 640
-        ? (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button><br/>`)
-        : (html += `<button class="rounded-3xl bg-white px-4 py-2 sm:mr-3">${skill}</button>`);
+        ? (html += `<button class="rounded-3xl bg-white px-4 py-2 font-raleWay font-semibold sm:mr-3">${skill}</button><br/>`)
+        : (html += `<button class="rounded-3xl bg-white px-4 py-2 font-raleWay font-semibold sm:mr-3">${skill}</button>`);
   });
   return html;
+}
+
+function toggleAccordion() {
+  if (event.target.nodeName === "SPAN") {
+    event.target.classList.toggle("-rotate-45");
+    event.target.parentElement.nextElementSibling.classList.toggle("hidden");
+  }
+
+  event.target.nextElementSibling.classList.toggle("hidden"),
+    event.target.querySelector("span").classList.toggle("-rotate-45");
 }
 
 window.addEventListener("resize", async () => {
