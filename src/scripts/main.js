@@ -91,12 +91,16 @@ function addSkills(skills) {
 
 function toggleAccordion() {
   if (event.target.nodeName === "SPAN") {
-    event.target.classList.toggle("-rotate-45");
     event.target.parentElement.nextElementSibling.classList.toggle("hidden");
+    event.target.textContent === "+"
+      ? (event.target.innerHTML = "-")
+      : (event.target.innerHTML = "+");
+  } else {
+    event.target.nextElementSibling.classList.toggle("hidden"),
+      event.target.querySelector("span").textContent === "+"
+        ? (event.target.querySelector("span").innerHTML = "-")
+        : (event.target.querySelector("span").innerHTML = "+");
   }
-
-  event.target.nextElementSibling.classList.toggle("hidden"),
-    event.target.querySelector("span").classList.toggle("-rotate-45");
 }
 
 window.addEventListener("resize", async () => {
