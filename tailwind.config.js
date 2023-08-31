@@ -10,7 +10,6 @@ module.exports = {
         secondary: "#8ACC50",
         lightYellow: "#F4BA00",
         grayish: "#1E1E1E",
-        third: "#0000",
       },
       fontFamily: {
         montSerrat: ["Montserrat", "sans-serif"],
